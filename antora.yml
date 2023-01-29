@@ -1,0 +1,5 @@
+name: softwaredevelopment
+title: Software Development
+version: 1.0
+nav:
+  - modules/ROOT/nav.adoc
