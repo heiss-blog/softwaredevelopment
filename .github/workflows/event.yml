@@ -1,0 +1,14 @@
+name: Commit event
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Repository Dispatch to Antora
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        token: ${{ secrets.EVENT_SECRET }}
+        repository: heiss-blog/antora
+        event-type: child-changed
